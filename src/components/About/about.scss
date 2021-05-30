@@ -1,0 +1,52 @@
+$background-about: #504744;
+$font-color-about: #dfd7d5;
+
+.about {
+  background-color: $background-about;
+  color: $font-color-about;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.about__heading {
+  background-color: white;
+  color: #000;
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  margin: 0 2%;
+  border: 1px solid #000;
+  font-size: 1.8rem;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.about__motto {
+  padding: 4rem 0;
+
+  h2 {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 300;
+
+    span {
+      font-weight: 700;
+    }
+  }
+}
+
+.about__paragraph {
+  display: flex;
+  flex-direction: column;
+  p {
+    font-family: "Montserrat";
+    font-size: 2rem;
+    line-height: 2.8rem;
+    font-weight: 300;
+    text-align: justify;
+    margin: 0;
+    padding-bottom: 4rem;
+  }
+}
