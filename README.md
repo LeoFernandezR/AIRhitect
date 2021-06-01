@@ -1,4 +1,4 @@
-## MovieVersus App
+## AIRhitect
 
 - [Setup](#setup)
 
