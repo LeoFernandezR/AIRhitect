@@ -1,32 +1,44 @@
-$font-color: #ff8322;
-$background-font: #362f2d;
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+/* MOBILE FIRST */
 
 .background__image {
+  @include img__background;
   background-image: url("../../images/home.jpg");
   min-height: 100vh;
-  background-attachment: fixed;
   background-position: left;
-  background-repeat: no-repeat;
-  background-size: cover;
   display: flex;
+  position: relative;
 }
 
 .home__wrapper {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
   justify-content: space-between;
   background-color: rgba($color: #000000, $alpha: 0.5);
   h1 {
-    flex: 0.75;
-    color: $font-color;
+    display: block;
+    color: $font-orange;
+    font-family: $secondary-font-family;
     font-size: 3rem;
     text-transform: uppercase;
     line-height: 5rem;
     margin: 0 10%;
 
     span {
-      background-color: $background-font;
+      background-color: $dark-gray;
+    }
+  }
+}
+
+/* DESKTOP */
+
+@include desktop-only {
+  .home__wrapper {
+    h1 {
+      margin: 0 50% 0 10%;
     }
   }
 }

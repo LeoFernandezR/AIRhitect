@@ -5,8 +5,8 @@ import "./home.scss"
 const Home = () => {
   return (
     <div className="background__image">
+      <Navbar />
       <div className="home__wrapper">
-        <Navbar />
         <h1>
           <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
         </h1>

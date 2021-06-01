@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 
 import "typeface-lato"
 import "typeface-montserrat"
-import "./layout.css"
+import "./layout.scss"
 
 const Layout = ({ children }) => {
   return (
