@@ -1,0 +1,26 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+/* MOBILE FIRST */
+
+.section__header {
+  font-family: $primary-font-family;
+  background-color: white;
+  color: #000;
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  margin: 0 2%;
+  font-size: 1.8rem;
+  margin-top: 3.6rem;
+  text-align: center;
+  width: fit-content;
+}
+
+/* DESKTOP */
+
+@include desktop-only {
+  .section__header {
+    margin: 0 1%;
+    margin-top: 4.5rem;
+  }
+}
