@@ -1,0 +1,12 @@
+@mixin img__background {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin desktop-only {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
