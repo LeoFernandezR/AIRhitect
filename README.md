@@ -22,7 +22,7 @@ $ npm start
 
 ## General info
 
-Landing page for AIRhitect
+Landing page for AIRhitect, mainly styles
 
 ## Technologies
 
