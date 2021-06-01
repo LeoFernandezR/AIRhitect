@@ -1,0 +1,203 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+/* MOBILE FIRST */
+
+.contact {
+  position: relative;
+  min-height: 100vh;
+  background-color: $dark-gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: $primary-font-family;
+}
+
+.contact__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem 0;
+  color: $font-orange;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.contact__info__data {
+  h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  li {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    display: flex;
+
+    .icon {
+      margin-right: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 0.6rem;
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.contact__info__hiring {
+  ul {
+    display: flex;
+    font-size: 2rem;
+    margin: 2.5rem 0;
+  }
+
+  li {
+    margin-right: 1rem;
+  }
+
+  a {
+    color: $font-orange;
+  }
+
+  p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 2rem;
+  }
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  font-family: $primary-font-family;
+  font-weight: 300;
+  margin-top: 2rem;
+
+  input,
+  textarea {
+    color: $font-orange;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border: none;
+    margin-bottom: 1rem;
+    background-color: $light-dark-grey;
+    resize: none;
+    outline: none;
+  }
+
+  button {
+    width: fit-content;
+    align-self: flex-end;
+    background-color: $font-orange;
+    color: $light-dark-grey;
+    outline: none;
+    border: none;
+    padding: 0.8rem;
+    font-weight: 400;
+    font-size: 1.2rem;
+  }
+}
+
+.contact__map {
+  margin: 0;
+}
+/* DESKTOP */
+
+@include desktop-only {
+  .contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .contact__wrapper {
+      flex: 0.6;
+
+      h1 {
+        margin-left: 0.9rem;
+      }
+    }
+    .contact__map {
+      flex: 0.4;
+      min-height: 100vh;
+    }
+  }
+
+  .contact__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 2rem 0 0 0;
+
+    .contact__info__data,
+    .contact__info__hiring {
+      flex: 0 0 calc(50% - 3rem);
+    }
+  }
+  .contact__content {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .contact__info__data {
+    h1 {
+      font-size: 2rem;
+    }
+    li {
+      font-size: 1.2rem;
+    }
+  }
+
+  .contact__info__hiring {
+    ul {
+      margin: 0;
+    }
+
+    li {
+      font-size: 2rem;
+      margin-bottom: 1.3rem;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+  }
+  .contact__form {
+    input {
+      width: 45%;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+    }
+    textarea {
+      width: 100%;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+    }
+
+    button {
+      margin: 0;
+      font-size: 1rem;
+      padding: 0.5rem;
+    }
+  }
+  .contact__map {
+    @include img__background;
+    background-image: url(../../images/location.jpg);
+    background-attachment: unset;
+
+    .contact__map__img {
+      display: none !important;
+    }
+  }
+}
