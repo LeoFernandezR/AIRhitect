@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "air-hitect",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "landing page for AIRhitect (this was part of a test dev)",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Leonardo Fernandez <leonardo.fernandez140298@gmail.com>",
   "dependencies": {
     "gatsby": "^3.4.1",
     "gatsby-plugin-gatsby-cloud": "^2.4.1",
