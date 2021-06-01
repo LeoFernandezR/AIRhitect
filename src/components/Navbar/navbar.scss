@@ -1,19 +1,121 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+/* MOBILE FIRST */
 .navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2%;
+  font-family: $primary-font-family;
+  z-index: 1001;
+  color: #000;
+  font-weight: 300;
 }
 
 .navbar__navbar {
   flex: 0.33;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
+  position: relative;
+
+  span {
+    display: none;
+  }
 }
+
+.navbar__btn {
+  padding: 0.2rem;
+  border: none;
+  background-color: #fff;
+
+  button {
+    outline: none;
+  }
+}
+
+.navbar__menu {
+  display: none;
+  margin: 0;
+  padding: 0;
+  background-color: #ffff;
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  width: 12rem;
+  li {
+    padding: 0.4rem 1.2rem;
+
+    list-style: none;
+    margin: 0;
+    transition: background-color 0.3s ease-out;
+    &:hover {
+      background-color: #e1e1e1;
+    }
+  }
+  a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    color: #000;
+    text-decoration: none;
+    font-size: 0.8rem;
+  }
+}
+
 .navbar__logo {
   flex: 0.66;
 }
 
 .navbar__contact__button {
   display: none;
+  background-color: #fff;
+  padding: 0.2rem 0.5rem;
+}
+
+/* DESKTOP */
+
+@include desktop-only {
+  .navbar {
+    padding: 1%;
+  }
+
+  .navbar__navbar {
+    font-size: 1rem;
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+    }
+
+    svg {
+      font-size: 1.2rem;
+    }
+
+    span {
+      display: inline;
+    }
+  }
+
+  .navbar__contact__button {
+    display: block;
+    text-decoration: none;
+    color: #000;
+  }
+  .navbar__contact__button,
+  .navbar__navbar,
+  .navbar__logo {
+    flex: none;
+  }
+}
+
+/* utils*/
+
+.d-block {
+  display: block !important;
 }
